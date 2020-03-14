@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root{
+  --max-width:1100px;
+  --primary-color:#c72727;
+  --secondary-color:#f99500;
+  --light-color:#f3f3f3;
+  --dark-color : #333;
+
+}
+
+.category{
+  --sport-color: #f99500;
+  --ent-color:#a66bbe;
+  --tech-color:#009cff;
+  display: inline-block;
+  color: #fff;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  padding: 0.1rem 0.8rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.category-sports {background:var(--sport-color)}
+.category-ent {background:var(--ent-color)}
+.category-tech {background:var(--tech-color)}
+
+
+.btn{
+  display: inline-block;
+  border: none;
+  background: : var(--dark-color);
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+}
+
+.btn-primary{  background-color: var(--primary-color);}
+.btn-secondary{  background-color: var(--secondary-color);}
+
+
+.btn:hover{
+  opacity: 0.8;
+}
+
+.btn-block{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+
+body{
+  font-family: 'Lato' ,sans-serif;
+  line-height: 1.5rem;
+  background-color: var(--light-color);
+}
+
+
+a{text-decoration: none; color: #333;}
+
+ul {list-style: none;}
+img{width: 100%;}
+p{margin: 0.5rem 0rem;}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Staatliches', cursive;
+  margin-top: 0.55rem;
+  margin-bottom: 0.55rem;
+  line-height: 2rem;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0rem 2rem;
+  overflow: hidden;
+}
+
+.py-1{padding: 1rem}
+.py-2{padding: 2rem}
+.py-3{padding: 3rem}
+
+.card{
+  background: #fff;
+  padding: 1rem;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-dark p,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-primary p,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a,
+.bg-secondary p
+ {color: #fff;}
+
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+
+.page-container{
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap:1.5rem;
+  margin:1.5rem 0rem;
+}
+
+.page-container > *:first-child{
+  grid-row: 1/ span 3;
+}
+
+.list li {
+  padding: 0.75rem 0rem;
+  border-bottom: 1px solid #888;
+  width: 90%
+}
+
+.list li a:hover{
+ color: var(--primary-color)
+}
+
+/* ---------------------- */
+#main-nav{
+  padding: 1rem;
+  background: #fff;
+  position: sticky;
+  z-index: 1;
+  top: 0px;
+}
+
+#main-nav .container{
+  display: grid;
+  grid-template-columns:6fr 3fr 2fr;
+  grid-gap : 1rem;
+  align-items: center;
+}
+
+#main-nav .logo {
+  width: auto;
+  height: 50px;
+}
+
+#main-nav .social{
+  display: flex;
+  color: #777;
+  justify-content: space-evenly;
+}
+
+/* Navbar */
+#main-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+#main-nav ul li a {
+  padding: 0.75rem;
+  font-weight: bold;
+  background:#aaa;
+  margin: 0rem 1rem;
+}
+
+#main-nav ul li a.current{
+  background: var(--primary-color);
+  color: #fff;
+}
+
+#main-nav ul li a.current:hover{
+  background: var(--light-color);
+  color: #333;
+}
+
+
+
+/* Showcase */
+
+#showcase {
+  background: url('/img/featured.jpg') no-repeat center center/cover;
+  background-color: #444;
+  background-blend-mode: overlay;
+  padding: 2rem;
+}
+
+#showcase .showcase-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#showcase .showcase-content{
+  color:#fff;
+}
+
+
+/* NEWS CARDS */
+
+#home-articles .articles-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap:1rem;
+}
+/* * implies anything. Here we target any element that is direct child to
+article-container */
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child
+ {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap:1rem;
+  grid-column : 1 / span 2;
+}
+
+#home-articles .articles-container > *:last-child
+{grid-column: 2 / span 2}
+
+
+/* Footer */
+
+#footer .footer-grid{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap:4rem;
+}
+
+
+
+#footer .footer-grid >div input{
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+#footer .footer-grid >div:last-child{
+  grid-column: 1/ span 4;
+  text-align: center;
+  width: 100%;
+  background: #434343
+}
