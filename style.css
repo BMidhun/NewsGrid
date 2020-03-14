@@ -33,6 +33,11 @@
 .category-ent {background:var(--ent-color)}
 .category-tech {background:var(--tech-color)}
 
+input{
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem 0rem;
+}
 
 .btn{
   display: inline-block;
